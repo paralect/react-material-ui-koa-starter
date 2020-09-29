@@ -7,6 +7,7 @@ import { useAuthenticated } from 'resources/user';
 
 function PrivateRoute({ children, ...rest }) {
   const isAuthenticated = useAuthenticated();
+
   const render = useCallback(
     ({ location }) =>
       isAuthenticated ? (
