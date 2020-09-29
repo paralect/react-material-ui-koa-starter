@@ -1,6 +1,28 @@
-import React from 'react';
-import { render } from 'react-dom';
+import express from 'express';
 
-import App from './App';
+let app = require('./server').default;
 
-render(<App />, document.querySelector('#app'));
+if (module.hot) {
+  module.hot.accept('./server', () => {
+    console.log('🔁  HMR Reloading `./server`...');
+    try {
+      // eslint-disable-next-line global-require
+      app = require('./server').default;
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  console.info('✅  Server-side HMR Enabled!');
+}
+
+const port = process.env.PORT || 3000;
+
+export default express()
+  .use((req, res) => app.handle(req, res))
+  .listen(port, (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(`> Started on port ${port}`);
+  });

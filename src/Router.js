@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { queryCache } from 'react-query';
 import { Box, CircularProgress } from '@material-ui/core';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import { Layout } from 'constants/layout';
 import { userApi } from 'resources/user';
 import PrivateRoute from 'components/PrivateRoute';

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typography, Button } from '@material-ui/core';
 
-import routes from 'src/routes';
+import routes from 'routes';
 
 function NotFound() {
   return (

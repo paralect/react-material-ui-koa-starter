@@ -3,18 +3,13 @@
   "version": "1.0.0",
   "description": "React starter with Material design components",
   "private": true,
-  "author": "",
   "license": "MIT",
   "repository": "git@github.com:paralect/react-material-ui-koa-starter.git",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "build": "nwb build-react-app",
-    "clean": "nwb clean-app",
-    "start": "nwb serve-react-app",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js"
   },
   "husky": {
     "hooks": {
@@ -28,17 +23,17 @@
     ]
   },
   "dependencies": {
-    "@date-io/date-fns": "^1.3.13",
+    "@date-io/date-fns": "^2.10.6",
     "@material-ui/core": "^4.11.0",
-    "@material-ui/data-grid": "^4.0.0-alpha.2",
+    "@material-ui/data-grid": "^4.0.0-alpha.6",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/system": "^4.9.14",
     "axios": "^0.20.0",
     "date-fns": "^2.16.1",
-    "dotenv-webpack": "^3.0.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "express": "^4.17.1",
     "formik": "^2.1.5",
     "formik-material-ui": "^3.0.0",
     "formik-material-ui-pickers": "0.0.11",
@@ -50,20 +45,20 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-query": "^2.23.0",
-    "react-query-devtools": "^2.5.0",
+    "react-query-devtools": "^2.5.1",
     "react-router-dom": "^5.2.0",
     "yup": "^0.29.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.9.0",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
-    "nwb": "0.25.x"
+    "razzle": "^3.3.0"
   }
 }
