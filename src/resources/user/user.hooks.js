@@ -1,7 +1,7 @@
 import { useHistory, useLocation } from 'react-router-dom';
 import { queryCache, useMutation } from 'react-query';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import { signIn, signUp, signOut, reset } from './user.api';
 
 export function useAuthenticated() {

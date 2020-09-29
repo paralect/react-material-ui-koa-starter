@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import useSearchParams from 'hooks/use-search-params';
 import { useSubmit } from 'helpers/formik.helper';
 import { useSetPassword } from 'resources/user';

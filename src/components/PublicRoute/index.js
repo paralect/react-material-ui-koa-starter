@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import { useAuthenticated } from 'resources/user';
 
 function PublicRoute({ children, ...rest }) {

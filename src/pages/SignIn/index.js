@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import { useSubmit } from 'helpers/formik.helper';
 import { useSignIn } from 'resources/user';
 import AuthForm from 'components/AuthForm';

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from 'react-query';
 import { Button, Typography } from '@material-ui/core';
 
-import routes from 'src/routes';
+import routes from 'routes';
 import { useSubmit } from 'helpers/formik.helper';
 import { userApi } from 'resources/user';
 import AuthForm from 'components/AuthForm';
