@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^2.10.6",
+    "@loadable/component": "^5.13.2",
     "@material-ui/core": "^4.11.0",
     "@material-ui/data-grid": "^4.0.0-alpha.6",
     "@material-ui/icons": "^4.9.1",
@@ -42,6 +43,8 @@
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "qs": "^6.9.4",
+    "razzle-plugin-offline": "0.0.1-alpha.1",
+    "razzle-plugin-svg-react-component": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-query": "^2.23.0",

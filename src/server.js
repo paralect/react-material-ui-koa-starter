@@ -14,12 +14,39 @@ const server = express();
 function renderFullPage(html, css) {
   return `
     <!doctype html>
-    <html lang="">
+    <html lang="en">
     <head>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
-      <title>Title</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#ff4400">
+      <meta
+        name="description"
+        content="A starter for new projects with a power of React and Material components."
+      >
+
+      <title>Title</title>
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <noscript>
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel="stylesheet"
+          type="text/css"
+        />
+      </noscript>
+
       <style id="jss-server-side">${css}</style>
       ${
         assets.client.css
@@ -33,6 +60,7 @@ function renderFullPage(html, css) {
       }
     </head>
     <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root">${html}</div>
     </body>
     </html>
@@ -65,7 +93,23 @@ function handleRender(req, res) {
 
 server
   .disable('x-powered-by')
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .use(
+    express.static(process.env.RAZZLE_PUBLIC_DIR, {
+      etag: true, // Just being explicit about the default.
+      lastModified: true, // Just being explicit about the default.
+      setHeaders: (res, path) => {
+        const hashRegExp = new RegExp('\\.[0-9a-f]{8}\\.');
+
+        if (path.endsWith('.html')) {
+          // All of the project's HTML files end in .html
+          res.setHeader('Cache-Control', 'no-cache');
+        } else if (hashRegExp.test(path)) {
+          // If the RegExp matched, then we have a versioned URL.
+          res.setHeader('Cache-Control', 'max-age=31536000');
+        }
+      },
+    })
+  )
   .get('/*', handleRender);
 
 export default server;
