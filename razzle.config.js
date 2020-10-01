@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ['offline', 'svg-react-component'],
+  plugins: ['workbox', 'svg-react-component'],
 };

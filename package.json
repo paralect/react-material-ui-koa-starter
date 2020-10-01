@@ -45,11 +45,13 @@
     "qs": "^6.9.4",
     "razzle-plugin-offline": "0.0.1-alpha.1",
     "razzle-plugin-svg-react-component": "^1.0.3",
+    "razzle-plugin-workbox": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-query": "^2.23.0",
     "react-query-devtools": "^2.5.1",
     "react-router-dom": "^5.2.0",
+    "shrink-ray-current": "^4.1.2",
     "yup": "^0.29.3"
   },
   "devDependencies": {
@@ -63,5 +65,9 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "razzle": "^3.3.0"
+  },
+  "optionalDependencies": {
+    "iltorb": "^2.4.5",
+    "node-zopfli-es": "^1.0.6"
   }
 }

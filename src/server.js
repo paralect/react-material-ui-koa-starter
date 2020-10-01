@@ -2,6 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import express from 'express';
+import shrinkRay from 'shrink-ray-current';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
 import App from './App';
@@ -50,7 +51,14 @@ function renderFullPage(html, css) {
       <style id="jss-server-side">${css}</style>
       ${
         assets.client.css
-          ? `<link rel="stylesheet" href="${assets.client.css}">`
+          ? `
+            <link
+              rel="preload"
+              href="${assets.client.css}"
+              as="style"
+              onload="this.rel='stylesheet'"
+            >
+          `
           : ''
       }
       ${
@@ -93,6 +101,18 @@ function handleRender(req, res) {
 
 server
   .disable('x-powered-by')
+  .enable('trust proxy')
+  .use(shrinkRay())
+  .use((req, res, next) => {
+    const isLocal =
+      req.connection.localAddress === req.connection.remoteAddress;
+
+    if (!isLocal && process.env.NODE_ENV !== 'development' && !req.secure) {
+      return res.redirect(`https://${req.headers.host}${req.url}`);
+    }
+
+    return void next();
+  })
   .use(
     express.static(process.env.RAZZLE_PUBLIC_DIR, {
       etag: true, // Just being explicit about the default.
