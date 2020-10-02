@@ -6,10 +6,12 @@
   "license": "MIT",
   "repository": "git@github.com:paralect/react-material-ui-koa-starter.git",
   "scripts": {
-    "dev": "razzle start",
+    "start": "razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
-    "start": "NODE_ENV=production node build/server.js"
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "vercel-build": "razzle build",
+    "vercel-start": "NODE_ENV=production node build/server.js"
   },
   "husky": {
     "hooks": {
@@ -43,7 +45,6 @@
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "qs": "^6.9.4",
-    "razzle-plugin-offline": "0.0.1-alpha.1",
     "razzle-plugin-svg-react-component": "^1.0.3",
     "razzle-plugin-workbox": "^1.0.3",
     "react": "^16.13.1",
