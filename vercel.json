@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "build/public/**",
+      "use": "@now/static"
+    },
+    {
+      "src": "build/server.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    { "src": "/assets.json", "dest": "build/assets.json" },
+    { "src": "/favicon.ico", "dest": "build/public/favicon.ico" },
+    { "src": "/robots.txt", "dest": "build/public/robots.txt" },
+    { "src": "/service-worker.js", "dest": "build/public/service-worker.js" },
+    { "src": "/favicon.ico", "dest": "build/public/favicon.ico" },
+    { "src": "/site.webmanifest", "dest": "build/public/site.webmanifest" },
+    { "src": "/workbox-(?<hash>.*).js", "dest": "build/public/workbox-$hash.js" },
+    { "src": "/(?<img>.*).png", "dest": "build/public/$img.png" },
+    { "src": "/static/(.*)", "dest": "build/public/static/$1" },
+    { "src": "/(.*)", "dest": "build/server.js" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
