@@ -8,6 +8,4 @@ node_modules
 build
 .env.local
 .env.*.local
-
-# Local Netlify folder
-.netlify
+.vercel
