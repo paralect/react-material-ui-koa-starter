@@ -1,38 +1,33 @@
-**WARNING: This is the documentation for `razzle@next` (Webpack 4).**
-[Go here for for razzle@0.8.x (stable) docs (Webpack 3)](https://github.com/jaredpalmer/razzle/tree/master).
+# React Material-UI Koa starter
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-![repo-banner](https://user-images.githubusercontent.com/4060187/28923990-050a32d4-782e-11e7-9da7-574ce5a8b455.png)
+[![Stack](https://raw.githubusercontent.com/paralect/stack/master/stack-component-template/stack.png)](https://github.com/paralect/stack)
 
-[![CircleCI](https://circleci.com/gh/jaredpalmer/razzle/tree/master.svg?style=shield)](https://circleci.com/gh/jaredpalmer/razzle/tree/master) ![Razzle-status](https://david-dm.org/jaredpalmer/razzle.svg?path=packages/razzle) [![npm version](https://badge.fury.io/js/razzle.svg)](https://badge.fury.io/js/razzle)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![David Dependency Status](https://david-dm.org/paralect/react-material-ui-koa-starter.svg)](https://david-dm.org/paralect/react-material-ui-koa-starter)
 
-Universal JavaScript applications are tough to setup. Either you buy into a framework like [Next.js](https://github.com/zeit/next.js) or [react-server](https://github.com/redfin/react-server), fork a boilerplate, or set things up yourself. Aiming to fill this void, Razzle is a tool that abstracts all complex configuration needed for SSR into a single dependency--giving you the awesome developer experience of [create-react-app](https://github.com/facebookincubator/create-react-app), but then leaving the rest of your app's architectural decisions about frameworks, routing, and data fetching up to you. With this approach, Razzle not only works with React, but also Reason, Elm, Vue, Angular, and most importantly......whatever comes next.
+[![Watch on GitHub](https://img.shields.io/github/watchers/paralect/react-material-ui-koa-starter.svg?style=social&label=Watch)](https://github.com/paralect/react-material-ui-koa-starter/watchers)
+[![Star on GitHub](https://img.shields.io/github/stars/paralect/react-material-ui-koa-starter.svg?style=social&label=Stars)](https://github.com/paralect/react-material-ui-koa-starter/stargazers)
+[![Follow](https://img.shields.io/twitter/follow/paralect.svg?style=social&label=Follow)](https://twitter.com/paralect)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/paralect/react-material-ui-koa-starter.svg?style=social)](https://twitter.com/intent/tweet?text=I%27m%20using%20Stack%20components%20to%20build%20my%20next%20product%20🚀.%20Check%20it%20out:%20https://github.com/paralect/stack)
 
-**Razzle comes with the "battery-pack included"**:
+React Material-UI Koa starter is what we think an ideal starting point for React progressive web-applications (PWA) with the power of Material design components, offline-mode, SSR etc. It is based on the following primary technologies:
 
-* :fire: Universal Hot Module Replacement, so both the client and server update whenever you make edits. No annoying restarts necessary
-* Comes with your favorite ES6 JavaScript goodies (through `babel-preset-razzle`)
-* Comes with the same CSS setup as [create-react-app](https://github.com/facebookincubator/create-react-app)
-* Works with [React](https://github.com/facebook/react), [Preact](https://github.com/developit/preact), [Elm](http://elm-lang.org/), [Reason-React](https://github.com/jaredpalmer/razzle/tree/master/examples/with-reason-react), [Inferno](https://github.com/infernojs), and [Rax](https://github.com/alibaba/rax) as well as [Angular](https://github.com/angular/angular) and [Vue](https://github.com/vuejs/vue) if that's your thing
-* Escape hatches for customization via `.babelrc` and `razzle.config.js`
-* [Jest](https://github.com/facebook/jest) test runner setup with sensible defaults via `razzle test`
+- [react](https://reactjs.org/)
+- [react-router](https://reactrouter.com/web)
+- [react-query](https://react-query.tanstack.com/)
+- [material-ui](https://material-ui.com/)
+- [razzle](https://razzlejs.org/)
+
+Universal JavaScript applications are tough to setup. Either you buy into a framework like [Next.js](https://github.com/zeit/next.js) or [react-server](https://github.com/redfin/react-server), fork a boilerplate, or set things up yourself. Aiming to fill this void, we use Razzle as a tool that abstracts all complex configuration needed for SSR into a single dependency - giving you the awesome developer experience of [create-react-app](https://github.com/facebookincubator/create-react-app), but then leaving the rest of your app's architectural decisions about frameworks, routing, and data fetching up to you.
 
 ## Quick Start
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jaredpalmer/razzle.svg)](https://greenkeeper.io/)
-
-```bash
-npm install -g create-razzle-app
-
-create-razzle-app my-app
-cd my-app
-npm start
-```
-
-Then open http://localhost:3000/ to see your app. Your console should look like this:
-
-<img src="https://cloud.githubusercontent.com/assets/4060187/26324663/b31788c4-3f01-11e7-8e6f-ffa48533af54.png" width="500px" alt="Razzle Development Mode"/>
-
-**That's it**. You don't need to worry about setting up multiple webpack configs or other build tools. Just start editing `src/App.js` and go!
+[![Known Vulnerabilities](https://snyk.io/test/github/paralect/react-material-ui-koa-starter/badge.svg)](https://snyk.io/test/github/paralect/react-material-ui-koa-starter)
 
 Below is a list of commands you will probably find useful.
 
@@ -40,6 +35,9 @@ Below is a list of commands you will probably find useful.
 
 Runs the project in development mode.
 You can view your application at `http://localhost:3000`
+Your console should look like this:
+
+<img src="https://cloud.githubusercontent.com/assets/4060187/26324663/b31788c4-3f01-11e7-8e6f-ffa48533af54.png" width="500px" alt="Razzle Development Mode"/>
 
 The page will reload if you make edits.
 
@@ -75,160 +73,7 @@ If your application is running, and you need to manually restart your server, yo
 
 ## <img src="https://user-images.githubusercontent.com/4060187/37915268-209644d0-30e7-11e8-8ef7-086b529ede8c.png" width="500px" alt="Razzle Hot Restart"/>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-**Table of Contents**
-
-* [Customization](#customization)
-  * [Extending Babel Config](#extending-babel-config)
-  * [Extending Webpack](#extending-webpack)
-  * [Environment Variables](#environment-variables)
-  * [Adding Temporary Environment Variables In Your Shell](#adding-temporary-environment-variables-in-your-shell)
-    * [Windows (cmd.exe)](#windows-cmdexe)
-    * [Linux, macOS (Bash)](#linux-macos-bash)
-  * [Adding Environment Variables In `.env`](#adding-environment-variables-in-env)
-    * [What other `.env` files are can be used?](#what-other-env-files-are-can-be-used)
-* [How Razzle works (the secret sauce)](#how-razzle-works-the-secret-sauce)
-* [Inspiration](#inspiration)
-  * [Author](#author)
-* [Contributors](#contributors)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Customization
-
-### Customizing Babel Config
-
-Razzle comes with most of ES6 stuff you need. However, if you want to add your own babel transformations, just add a `.babelrc` file to the root of your project.
-
-```js
-{
-  "presets": [
-    "razzle/babel", // NEEDED
-    "stage-0"
-   ],
-   "plugins": [
-     // additional plugins
-   ]
-}
-```
-
-A word of advice: the `.babelrc` file will replace the internal razzle babelrc template. You must include at the very minimum the default razzle/babel preset.
-
-### Extending Webpack
-
-You can also extend the underlying webpack config. Create a file called `razzle.config.js` in your project's root.
-
-```js
-// razzle.config.js
-
-module.exports = {
-  modify: (config, { target, dev }, webpack) => {
-    // do something to config
-
-    return config;
-  },
-};
-```
-
-A word of advice: `razzle.config.js` is an escape hatch. However, since it's just JavaScript, you can and should publish your `modify` function to npm to make it reusable across your projects. For example, imagine you added some custom webpack loaders and published it as a package to npm as `my-razzle-modifictions`. You could then write your `razzle.config.js` like so:
-
-```
-// razzle.config.js
-const modify = require('my-razzle-modifictions');
-
-module.exports = {
-  modify
-}
-```
-
-Last but not least, if you find yourself needing a more customized setup, Razzle is _very_ forkable. There is one webpack configuration factory that is 300 lines of code, and 4 scripts (`build`, `start`, `test`, and `init`). The paths setup is shamelessly taken from [create-react-app](https://github.com/facebookincubator/create-react-app), and the rest of the code related to logging.
-
-### Environment Variables
-
-**The environment variables are embedded during the build time.** You can read them at runtime just because by default we export them with the `webpack.DefinePlugin`.
-
-* `process.env.RAZZLE_PUBLIC_DIR`: Absolute path to the public directory in the server's filesystem.
-* `process.env.RAZZLE_ASSETS_MANIFEST`: Path to a file containing compiled asset outputs
-* `process.env.REACT_BUNDLE_PATH`: Relative path to where React will be bundled during development. Unless you are modifying the output path of your webpack config, you can safely ignore this. This path is used by `react-error-overlay` and webpack to power up the fancy runtime error iframe. For example, if you are using common chunks and an extra entry to create a vendor bundle with stuff like react, react-dom, react-router, etc. called `vendor.js`, and you've changed webpack's output to `[name].js` in development, you'd want to set this environment variable to `/static/js/vendor.js`. If you do not make this change, nothing bad will happen, you will simply not get the cool error overlay when there are runtime errors. You'll just see them in the console. Note: This does not impact production bundling.
-* `process.env.VERBOSE`: default is false, setting this to true will not clear the console when you make edits in development (useful for debugging).
-* `process.env.PORT`: The `BUILD_TARGET=server` build listens on this port for all NODE_ENVs. default is `3000`
-* `process.env.HOST`: The IP address that the server will bind to. default is `0.0.0.0`, for INADDR_ANY
-* `process.env.NODE_ENV`: `'development'` or `'production'`
-* `process.env.BUILD_TARGET`: either `'client'` or `'server'`
-* `process.env.PUBLIC_PATH`: Only in used in `razzle build`. You can alter the `webpack.config.output.publicPath` of the client assets (bundle, css, and images). This is useful if you plan to serve your assets from a CDN. Make sure to _include_ a trailing slash (e.g. `PUBLIC_PATH=https://cdn.example.com/`). If you are using React and altering the public path, make sure to also [include the `crossorigin` attribute](https://reactjs.org/docs/installation.html#using-a-cdn) on your `<script>` tag in `src/server.js`.
-* `process.env.CLIENT_PUBLIC_PATH`: The `NODE_ENV=development` build's `BUILD_TARGET=client` has a different `PUBLIC_PATH` than `BUILD_TARGET=server`. Default is `http://${process.env.HOST}:${process.env.PORT + 1}/`
-
-You can create your own custom environment variables that will be inlined during the build. They must start
-with `RAZZLE_`. Any other variables except the ones listed above will be ignored to avoid accidentally exposing a private key on the machine that could have the same name. Changing any environment variables will require you to restart the development server if it is running.
-
-These environment variables will be defined for you on `process.env`. For example, having an environment variable named `RAZZLE_SECRET_CODE` will be exposed in your JS as `process.env.RAZZLE_SECRET_CODE`.
-
-### Adding Temporary Environment Variables In Your Shell
-
-Defining environment variables can vary between OSes. It’s also important to know that this manner is temporary for the
-life of the shell session.
-
-#### Windows (cmd.exe)
-
-```cmd
-set RAZZLE_SECRET_CODE=abcdef&&npm start
-```
-
-(Note: the lack of whitespace is intentional.)
-
-#### Linux, macOS (Bash)
-
-```bash
-RAZZLE_SECRET_CODE=abcdef npm start
-```
-
-### Adding Environment Variables In `.env`
-
-To define permanent environment variables, create a file called .env in the root of your project:
-
-```
-RAZZLE_SECRET_CODE=abcdef
-```
-
-#### What other `.env` files are can be used?
-
-* `.env`: Default.
-* `.env.local`: Local overrides. **This file is loaded for all environments except test.**
-* `.env.development`, `.env.test`, `.env.production`: Environment-specific settings.
-* `.env.development.local`, `.env.test.local`, `.env.production.local`: Local overrides of environment-specific settings.
-
-Files on the left have more priority than files on the right:
-
-* `npm start`: `.env.development.local`, `.env.development`, `.env.local`, `.env`
-* `npm run build`: `.env.production.local`, `.env.production`, `.env.local`, `.env`
-* `npm test`: `.env.test.local`, `.env.test`, `.env` (note `.env.local` is missing)
-
-These variables will act as the defaults if the machine does not explicitly set them.<br>
-Please refer to the [dotenv documentation](https://github.com/motdotla/dotenv) for more details.
-
-> Note: If you are defining environment variables for development, your CI and/or hosting platform will most likely need
-> these defined as well. Consult their documentation how to do this. For example, see the documentation for [Travis CI](https://docs.travis-ci.com/user/environment-variables/) or [Heroku](https://devcenter.heroku.com/articles/config-vars).
-
-## How Razzle works (the secret sauce)
-
-**tl;dr**: 2 configs, 2 ports, 2 webpack instances, both watching and hot reloading the same filesystem, in parallel during development and a little `webpack.output.publicPath` magic.
-
-In development mode (`razzle start`), Razzle bundles both your client and server code using two different webpack instances running with Hot Module Replacement in parallel. While your server is bundled and run on whatever port your specify in `src/index.js` (`3000` is the default), the client bundle (i.e. entry point at `src/client.js`) is served via `webpack-dev-server` on a different port (`3001` by default) with its `publicPath` explicitly set to `localhost:3001` (and not `/` like many other setups do). Then the server's html template just points to the absolute url of the client JS: `localhost:3001/static/js/client.js`. Since both webpack instances watch the same files, whenever you make edits, they hot reload at _exactly_ the same time. Best of all, because they use the same code, the same webpack loaders, and the same babel transformations, you never run into a React checksum mismatch error.
-
-## Inspiration
-
-* [palmerhq/backpack](https://github.com/palmerhq/backpack)
-* [nytimes/kyt](https://github.com/nytimes/kyt)
-* [facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app)
-* [humblespark/sambell](https://github.com/humblespark/sambell)
-* [zeit/next.js](https://github.com/zeit/next.js)
-
-#### Author
-
-* [Jared Palmer](https://twitter.com/jaredpalmer)
+#### Read [Razzle documentation](https://razzlejs.org/) for more info
 
 ---
 
@@ -236,13 +81,20 @@ MIT License
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/IharKrasnik"><img src="https://avatars3.githubusercontent.com/u/2302873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ihar</b></sub></a><br /><a href="#ideas-IharKrasnik" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/paralect/react-material-ui-koa-starter/pulls?q=is%3Apr+reviewed-by%3AIharKrasnik" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/mikhailgagarin"><img src="https://avatars2.githubusercontent.com/u/61055010?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mike Gagarin</b></sub></a><br /><a href="https://github.com/paralect/react-material-ui-koa-starter/commits?author=mikhailgagarin" title="Code">💻</a> <a href="https://github.com/paralect/react-material-ui-koa-starter/commits?author=mikhailgagarin" title="Documentation">📖</a> <a href="#ideas-mikhailgagarin" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
 
-| [<img src="https://avatars2.githubusercontent.com/u/4060187?v=4" width="100px;"/><br /><sub>Jared Palmer</sub>](http://jaredpalmer.com)<br />[💬](#question-jaredpalmer 'Answering Questions') [💻](https://github.com/jaredpalmer/razzle/commits?author=jaredpalmer 'Code') [🎨](#design-jaredpalmer 'Design') [📖](https://github.com/jaredpalmer/razzle/commits?author=jaredpalmer 'Documentation') [💡](#example-jaredpalmer 'Examples') [🤔](#ideas-jaredpalmer 'Ideas, Planning, & Feedback') [👀](#review-jaredpalmer 'Reviewed Pull Requests') [⚠️](https://github.com/jaredpalmer/razzle/commits?author=jaredpalmer 'Tests') [🔧](#tool-jaredpalmer 'Tools') | [<img src="https://avatars3.githubusercontent.com/u/1415847?v=4" width="100px;"/><br /><sub>Jari Zwarts</sub>](https://jari.io)<br />[💬](#question-jariz 'Answering Questions') [💻](https://github.com/jaredpalmer/razzle/commits?author=jariz 'Code') [🤔](#ideas-jariz 'Ideas, Planning, & Feedback') [🔌](#plugin-jariz 'Plugin/utility libraries') [👀](#review-jariz 'Reviewed Pull Requests') | [<img src="https://avatars0.githubusercontent.com/u/810438?v=4" width="100px;"/><br /><sub>Dan Abramov</sub>](http://twitter.com/dan_abramov)<br />[💻](https://github.com/jaredpalmer/razzle/commits?author=gaearon 'Code') [🤔](#ideas-gaearon 'Ideas, Planning, & Feedback') | [<img src="https://avatars0.githubusercontent.com/u/15182?v=4" width="100px;"/><br /><sub>Eric Clemmons</sub>](http://ericclemmons.github.com/)<br />[💻](https://github.com/jaredpalmer/razzle/commits?author=ericclemmons 'Code') [🤔](#ideas-ericclemmons 'Ideas, Planning, & Feedback') |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
