@@ -1,0 +1,36 @@
+{
+  "projectName": "react-material-ui-koa-starter",
+  "projectOwner": "paralect",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "IharKrasnik",
+      "name": "Ihar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2302873?v=4",
+      "profile": "https://github.com/IharKrasnik",
+      "contributions": [
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "mikhailgagarin",
+      "name": "Mike Gagarin",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/61055010?v=4",
+      "profile": "https://github.com/mikhailgagarin",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

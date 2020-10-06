@@ -11,7 +11,10 @@
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js",
     "vercel-build": "razzle build",
-    "vercel-start": "NODE_ENV=production node build/server.js"
+    "vercel-start": "NODE_ENV=production node build/server.js",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check"
   },
   "husky": {
     "hooks": {
@@ -56,6 +59,7 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "all-contributors-cli": "^6.18.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
