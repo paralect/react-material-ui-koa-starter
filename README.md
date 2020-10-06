@@ -1,13 +1,11 @@
 # React Material-UI Koa starter
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Stack](https://raw.githubusercontent.com/paralect/stack/master/stack-component-template/stack.png)](https://github.com/paralect/stack)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+[![Known Vulnerabilities](https://snyk.io/test/github/paralect/react-material-ui-koa-starter/badge.svg)](https://snyk.io/test/github/paralect/react-material-ui-koa-starter)
+[![All Contributors](https://img.shields.io/github/all-contributors/paralect/react-material-ui-koa-starter)](#contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![David Dependency Status](https://david-dm.org/paralect/react-material-ui-koa-starter.svg)](https://david-dm.org/paralect/react-material-ui-koa-starter)
 
 [![Watch on GitHub](https://img.shields.io/github/watchers/paralect/react-material-ui-koa-starter.svg?style=social&label=Watch)](https://github.com/paralect/react-material-ui-koa-starter/watchers)
@@ -26,8 +24,6 @@ React Material-UI Koa starter is what we think an ideal starting point for React
 Universal JavaScript applications are tough to setup. Either you buy into a framework like [Next.js](https://github.com/zeit/next.js) or [react-server](https://github.com/redfin/react-server), fork a boilerplate, or set things up yourself. Aiming to fill this void, we use Razzle as a tool that abstracts all complex configuration needed for SSR into a single dependency - giving you the awesome developer experience of [create-react-app](https://github.com/facebookincubator/create-react-app), but then leaving the rest of your app's architectural decisions about frameworks, routing, and data fetching up to you.
 
 ## Quick Start
-
-[![Known Vulnerabilities](https://snyk.io/test/github/paralect/react-material-ui-koa-starter/badge.svg)](https://snyk.io/test/github/paralect/react-material-ui-koa-starter)
 
 Below is a list of commands you will probably find useful.
 
