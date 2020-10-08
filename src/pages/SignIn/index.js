@@ -6,7 +6,7 @@ import routes from 'routes';
 import { useSubmit } from 'helpers/formik.helper';
 import { useSignIn } from 'resources/user';
 import AuthForm from 'components/AuthForm';
-import AuthField from 'components/AuthField';
+import FormField from 'components/FormField';
 import Password from 'components/Password';
 
 function SignIn() {
@@ -30,8 +30,8 @@ function SignIn() {
         </Button>
       }
     >
-      <AuthField label="Email" name="email" type="email" />
-      <Password label="Password" name="password" />
+      <FormField name="email" label="Email" type="email" />
+      <Password name="password" label="Password" />
     </AuthForm>
   );
 }

@@ -43,6 +43,7 @@
     }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/destructuring-assignment": "off",
     "no-console": "warn",
     "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",

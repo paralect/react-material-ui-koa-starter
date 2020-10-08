@@ -3,7 +3,7 @@ import React from 'react';
 import { Container } from '@material-ui/core';
 
 function AuthorisedLayout({ children }) {
-  return <Container component="main">{children}</Container>;
+  return <Container>{children}</Container>;
 }
 
 AuthorisedLayout.propTypes = {

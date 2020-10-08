@@ -35,7 +35,7 @@ function ResetPassword() {
         </Button>
       }
     >
-      <Password label="New Password" name="password" autoFocus />
+      <Password name="password" label="New Password" autoFocus />
     </AuthForm>
   );
 }

@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider maxSnack={3}>
-        <ReactQueryDevtools />
+        <ReactQueryDevtools position="bottom-right" />
         <CssBaseline />
         <Router />
       </SnackbarProvider>

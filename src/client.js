@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
-import { hydrate } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { register } from 'razzle-plugin-workbox/service-worker';
 
 import App from './App';
+
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line
+  const axe = require('@axe-core/react');
+
+  axe(React, ReactDOM, 1000);
+}
 
 function Main() {
   useEffect(() => {
@@ -21,7 +28,7 @@ function Main() {
   );
 }
 
-hydrate(<Main />, document.getElementById('root'));
+ReactDOM.hydrate(<Main />, document.getElementById('root'));
 
 if (module.hot) {
   module.hot.accept();
