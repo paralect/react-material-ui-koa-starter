@@ -6,7 +6,7 @@ import routes from 'routes';
 import { useSubmit } from 'helpers/formik.helper';
 import { useSignUp } from 'resources/user';
 import AuthForm from 'components/AuthForm';
-import AuthField from 'components/AuthField';
+import FormField from 'components/FormField';
 
 function SignUp() {
   const [signUp] = useSignUp();
@@ -34,10 +34,10 @@ function SignUp() {
         </Button>
       }
     >
-      <AuthField label="First Name" name="firstName" />
-      <AuthField label="Last Name" name="lastName" />
-      <AuthField label="Email" name="email" type="email" />
-      <AuthField label="Password" name="password" type="password" />
+      <FormField name="firstName" label="First Name" />
+      <FormField name="lastName" label="Last Name" />
+      <FormField name="email" label="Email" type="email" />
+      <FormField name="password" label="Password" type="password" />
     </AuthForm>
   );
 }

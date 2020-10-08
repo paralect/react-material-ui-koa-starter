@@ -7,8 +7,12 @@ import { Box, Button, Divider, Typography } from '@material-ui/core';
 import Logo from 'components/Logo';
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    '& > *:not(:last-child)': {
+  heading: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(3),
+  },
+  form: {
+    '& .MuiTextField-root': {
       marginBottom: theme.spacing(3),
     },
   },
@@ -30,45 +34,52 @@ function AuthForm({
   const classes = useStyles();
 
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit}>
-      {({ isSubmitting }) => (
-        <Box
-          className={classes.container}
-          component={Form}
-          display="flex"
-          flexDirection="column"
-          alignSelf="center"
-          alignItems="center"
-          justifyContent="center"
-          width={320}
-          maxWidth="90%"
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignSelf="center"
+      alignItems="center"
+      justifyContent="center"
+      width={320}
+      maxWidth="90%"
+    >
+      <Box component="header" width={1}>
+        <Logo />
+        <Divider variant="middle" />
+        <Typography
+          className={classes.heading}
+          component="h1"
+          variant="h4"
+          align="center"
         >
-          <Logo />
+          {title}
+        </Typography>
+      </Box>
 
-          <Divider width="100%" />
+      <Formik initialValues={initialValues} onSubmit={onSubmit}>
+        {({ isSubmitting }) => (
+          <main>
+            <Box className={classes.form} component={Form}>
+              {children}
 
-          <Typography component="h1" variant="h4" align="center">
-            {title}
-          </Typography>
+              <Box className={classes.btnContainer} width={1}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={isSubmitting}
+                  fullWidth
+                >
+                  {submitLabel}
+                </Button>
 
-          {children}
-
-          <Box className={classes.btnContainer} width={1}>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              disabled={isSubmitting}
-              fullWidth
-            >
-              {submitLabel}
-            </Button>
-
-            {additionalAction}
-          </Box>
-        </Box>
-      )}
-    </Formik>
+                {additionalAction}
+              </Box>
+            </Box>
+          </main>
+        )}
+      </Formik>
+    </Box>
   );
 }
 

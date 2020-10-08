@@ -7,7 +7,7 @@ import routes from 'routes';
 import { useSubmit } from 'helpers/formik.helper';
 import { userApi } from 'resources/user';
 import AuthForm from 'components/AuthForm';
-import AuthField from 'components/AuthField';
+import FormField from 'components/FormField';
 
 const ForgotView = {
   FORM: 'FORM',
@@ -59,7 +59,7 @@ function ForgotPassword() {
             </Button>
           }
         >
-          <AuthField label="Email" name="email" type="email" autoFocus />
+          <FormField label="Email" name="email" type="email" autoFocus />
         </AuthForm>
       );
   }

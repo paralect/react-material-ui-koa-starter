@@ -3,7 +3,7 @@ import qs from 'qs';
 
 import ApiError from './api.error';
 
-const baseURL = process.env.API_URL;
+const baseURL = process.env.RAZZLE_API_URL;
 
 const throwApiError = ({ status, statusText, data }) => {
   console.error(`API Error: ${status} ${statusText}`, data); //eslint-disable-line

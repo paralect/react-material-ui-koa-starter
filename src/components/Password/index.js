@@ -3,13 +3,13 @@ import { IconButton, InputAdornment } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
 
 import useToggle from 'hooks/use-toggle';
-import AuthField from 'components/AuthField';
+import FormField from 'components/FormField';
 
 function Password(props) {
   const { toggled: isPasswordVisible, toggle } = useToggle();
 
   return (
-    <AuthField
+    <FormField
       type={isPasswordVisible ? 'text' : 'password'}
       InputProps={{
         endAdornment: (
