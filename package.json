@@ -48,7 +48,7 @@
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "qs": "^6.9.4",
-    "razzle-plugin-svg-react-component": "^1.0.3",
+    "razzle-plugin-svg-react-component": "^2.0.0",
     "razzle-plugin-workbox": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
